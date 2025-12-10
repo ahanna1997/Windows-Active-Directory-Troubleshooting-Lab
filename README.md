@@ -64,9 +64,12 @@ Setting up Window Server 2025 and Static IP Configuration
 - Now that we are in the server manager let configure the essential settings on the Windows Server.
   
 1)Lets start by configuring the host name
+
 2) next the time zone
-3) then making sure the server is  up to date with the most updated software update
-4) finally we will configure the static IP address
+   
+4) then making sure the server is  up to date with the most updated software update
+   
+6) finally we will configure the static IP address
 
 
 
