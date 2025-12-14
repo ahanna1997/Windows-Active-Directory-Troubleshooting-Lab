@@ -73,4 +73,30 @@ Setting up Window Server 2025 and Static IP Configuration
 
 
 
-#
+#Installing the Active Directory 
+---
+Here we will be doing 2 critical task:
+
+1)Installing the Active Directory Domain Services (AD DS)role.(This step gives us the necessary components and tools for active directory on the sever setting the stage for centralized Network management.
+
+
+2)Promoting the server to a Domain Controller(DC) and creating a new domain
+
+
+
+Let's start with Installing the AD DS role.
+
+-In Server Manager you can click on Add other servers to manage or you cna go to the top right corner and click on "Manage" then add roles and feature.
+
+-You should see this pages.
++Before you begin page,click next.
++Select installation type (By default it will chose Role-based orfeature-based installation) click next.
++Select destination server.(Which should be the server that you have created in the step above mine was Server2025-DC01)
+
+
+
+-
+
+-
+
+-
