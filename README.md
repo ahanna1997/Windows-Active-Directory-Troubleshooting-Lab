@@ -65,11 +65,26 @@ Setting up Window Server 2025 and Static IP Configuration
   
 1)Lets start by configuring the host name
 
-2) next the time zone
+- In server manager lets find local server on the left hand side click it.
+
+- Properties page should have popped up and you will see Computer name click it to change it name
+
+- Once on the next page click change button at the bottom and on the new page you can change the computer name.(Changed mine to Server2025-DC01) and click okay.Will get a prompt that you have to retart your computer to apply changes click restart Now. (In a real world work environment only Server managers with Administrative Rights will be able to change the computer names)
+
+- After restart log back in and go back to server manager and the Local server to check if the computer name has changed.
+
+2) Next the time zone
+
+   - To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
+
+   - Once on the page scroll to Time zone and there you can chnage the time zone to whereever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
+
+      
+3) Then making sure the server is  up to date with the most updated software update
+
    
-4) then making sure the server is  up to date with the most updated software update
    
-6) finally we will configure the static IP address
+5) Finally we will configure the static IP address
 
 
 
