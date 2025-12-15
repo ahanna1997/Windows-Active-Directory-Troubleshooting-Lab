@@ -127,15 +127,22 @@ Let's start with Installing the AD DS role.
 
 After install we have to promote the server to a DC.(very important  because it actives AD DS snd sets up the first domain in a new forest establishing the foundation for managing network resources securely)
 
+-So in the Server Manager in the right hand corner you will see a flag with a Yellow caution symbol thats the notification center, click it  and ypou will see  as the very first option promote server this server to a DC click the link. 
 
+-On the pop up window it should be the Deployment Configuraton so here we want to create/Add a new Forest and we will have to make a Root domain Name for the forest .(Can be anything you like Im going to use mydomain.com) Click next
 
+-On th DC options page it should default to the ;lastest Option unless you have to select a backward compatiblity than no need to change.After that set the Directory Service Restore Mode (DSRM) password (Im using Password1) click next.
 
-  
+-Next page you willsee a warning but that okay click next.
 
+-on the next page is were you specify the net bios domain name it should be based off of your root domain name.(my root domain is mydomain.com so my bios domain will by MYDOMAIN) Click next.
 
+-Next page Paths is a default you cn leave them.(You will only need to modify them if your server has a separate drives for performance or redundancy)Click next.
 
--
+-Next page is just the review page click next.
 
--
+-Now the next page the prerequisites check page  just basically check to make sure the server meets all the requirements. After the server check hit install and computer will restart after Install.
+
+-After restrart you can 
 
 -
