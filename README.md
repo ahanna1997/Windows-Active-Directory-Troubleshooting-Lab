@@ -63,7 +63,7 @@ Setting up Window Server 2025 and Static IP Configuration
  
 - Now that we are in the server manager let configure the essential settings on the Windows Server.
   
-1)Lets start by configuring the host name
+1.Lets start by configuring the host name
 
 - In server manager lets find local server on the left hand side click it.
 
@@ -75,20 +75,36 @@ Setting up Window Server 2025 and Static IP Configuration
 
 2) Next the time zone
 
-   - To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
+- To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
 
-   - Once on the page scroll to Time zone and there you can chnage the time zone to whereever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
+- Once on the page scroll to Time zone and there you can chnage the time zone to whereever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
 
       
-3) Then making sure the server is  up to date with the most updated software update
+3) Then making sure the server is  up to date with the most updated software update(A crucial step for setting up or looking after a Windows Server because installing updates make sure that the windows Servers are on the lastest serurity patches or big fixes and performance enhancements)
 
-   
-   
-5) Finally we will configure the static IP address
+-To do this lets go to hover or the window icon right click on it  and scroll and click on settings and from there find Windows Update on the left hand side.
+
+-on the Windows update poage you will see all the update that are avaiable you can click install all and some updates may require a computer restart click restart.
+
+-After restat log back in and check for updates again to see if all were installed and up to date. Close the window.
+
+4) Finally we will configure the Static IP address( Needed a Window Server should have a static IP address to ensure consist network communication as Dynamic IP address from DHCP could change causing disruption to services like DNS or file sharing)
+
+-From the  Server Manager dashbard click on local Server on the left hand side there all the properties  will be show and let find the Ethernet section and click the that link to change it.(Should have IPv4 address assigned by DHCP,IPv6 enabled by default)
+
+-once click on it right click on ethernet and then properties then on the Ethernet properties popup lets find and click on Internet Protocol version 4(TCP/IPv4) and click on properties.
+
+-On the General page lets click on the second option which is Use te following IP address so we can configure them. For Ip address lets add 192.168.1.10 then sudnet mask click on the field and it should automatically fill it  and for default gateway  lets add 192.168.1.1. 
+
+-At the bottom for preferred DNS Server 127.0.0.1 if the server will act as DNS server otherwise use the network primary and click ok once done.
+
+-Now lets open up our Command Prompt (CMD) by find the search box and typing in CMD open it.In the CMD let type ipconfig for check the Windows IP Configuration and there you should be able to see everything that you just change in the steps above.(If you want to see more info you can type ipconfig /all and it will give more of the Window Server properties)
 
 
 
-#Installing the Active Directory 
+
+
+#Installing the Active Directory (AD)
 ---
 Here we will be doing 2 critical task:
 
