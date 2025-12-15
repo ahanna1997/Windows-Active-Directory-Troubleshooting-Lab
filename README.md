@@ -73,14 +73,14 @@ Setting up Window Server 2025 and Static IP Configuration
 
 - After restart log back in and go back to server manager and the Local server to check if the computer name has changed.
 
-2) Next the time zone
+2.Next the time zone
 
 - To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
 
 - Once on the page scroll to Time zone and there you can chnage the time zone to whereever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
 
       
-3) Then making sure the server is  up to date with the most updated software update(A crucial step for setting up or looking after a Windows Server because installing updates make sure that the windows Servers are on the lastest serurity patches or big fixes and performance enhancements)
+3.Then making sure the server is  up to date with the most updated software update(A crucial step for setting up or looking after a Windows Server because installing updates make sure that the windows Servers are on the lastest serurity patches or big fixes and performance enhancements)
 
 -To do this lets go to hover or the window icon right click on it  and scroll and click on settings and from there find Windows Update on the left hand side.
 
@@ -88,7 +88,7 @@ Setting up Window Server 2025 and Static IP Configuration
 
 -After restat log back in and check for updates again to see if all were installed and up to date. Close the window.
 
-4) Finally we will configure the Static IP address( Needed a Window Server should have a static IP address to ensure consist network communication as Dynamic IP address from DHCP could change causing disruption to services like DNS or file sharing)
+4.Finally we will configure the Static IP address( Needed as a Window Server should have a static IP address to ensure consist network communication as Dynamic IP address from DHCP could change causing disruption to services like DNS or file sharing)
 
 -From the  Server Manager dashbard click on local Server on the left hand side there all the properties  will be show and let find the Ethernet section and click the that link to change it.(Should have IPv4 address assigned by DHCP,IPv6 enabled by default)
 
@@ -99,8 +99,6 @@ Setting up Window Server 2025 and Static IP Configuration
 -At the bottom for preferred DNS Server 127.0.0.1 if the server will act as DNS server otherwise use the network primary and click ok once done.
 
 -Now lets open up our Command Prompt (CMD) by find the search box and typing in CMD open it.In the CMD let type ipconfig for check the Windows IP Configuration and there you should be able to see everything that you just change in the steps above.(If you want to see more info you can type ipconfig /all and it will give more of the Window Server properties)
-
-
 
 
 
