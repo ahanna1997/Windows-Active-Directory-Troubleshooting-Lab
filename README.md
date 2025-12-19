@@ -199,7 +199,20 @@ Installing Windows 11
 
 - Next tab hard disk here will see he have 80.00GB by default you cna keepthat and click finish.
 
-- Windows 11 should start running automatically if not just click it and click run. Once it starts go through the install  process by selecting language ,keyboard settings and select setup option after those three pages you will come to a Product Key page .
+- Windows 11 should start running automatically if not just click it and click run. Once it starts go through the install  process by selecting language ,keyboard settings and select setup option after those three pages you will come to a Product Key page selet dont have product key and next.
 
+- Next page select Windows 11 Pro as the OS and next Accept the term and conditions and click next on the Loction to install Windows11 and then Install and it will start installing Windows 11.
+
+- After the install  fill out the pages that are presented at the end the Windows update page should start and let it download.after update fill out all the Page after that.Windows 11 shpuld be install and operating on your Vitualbox.
+
+- Now once on the desktop of Windows 11  let insert Guest Additions CD images by hitting Control F on your keyboard snd clicking devices at the top of the page and hovering down to Insert Guest Additions CD Image .Once you do tha like on the Folder on the Windows 11 desktop  and in thae folder find This PC on the left handside and click the CD Drive(D:) VirtualBox Guest Addtions and inside find VboxWindowsAddons double click it and hit install and you will need to Reboot.
+
+- After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
+
+
+Now back to Windows Server 2025 to create a Network Between Windows 11 and Windows Server 2025
 -
+
+
+
 
