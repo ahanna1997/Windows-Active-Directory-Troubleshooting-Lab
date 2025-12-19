@@ -20,6 +20,7 @@ Skills Demonstrated:
   
 - Permission & access troubleshooting
 
+
 Lets create the Active Diretory using Windows Server 2025
 -----
 
@@ -143,6 +144,62 @@ After install we have to promote the server to a DC.(very important  because it 
 
 -Now the next page the prerequisites check page  just basically check to make sure the server meets all the requirements. After the server check hit install and computer will restart after Install.
 
--After restrart you can 
+-After restrart you can should see then login page.You should now see that you are now in the DC by seeing MYDOMAIN\Admistrator or what you have named your DC.(Mine was MYDOMAIN)
+
+-Login into Server with the password you created.Once logged in lets verify that the DC in the server Manager on the left had side you should now see AD DS & DNS. If you see those lets go to Tools at the top right corner and click tools.In the drop down you want to make sure you have three things: Active Directory User and Computers ,DNS,and Group Policy management.If you see all three lets proceed.
+
+-Now we test the DNS resolution. Go to the search box and search Command Prompt and enter.
+
+-Once the CMD is open type in nslookup  and whatever your domain is. (Mine is nslook mydomain.com ) 
+
+
+Active Directory Organizational Units(OUs) & Groups
+---
+In the section we will create our 
+
+1. Organization Units(OUs) which are primarily  used for Administrative Organization , Applying Group Policies(GPOs),Delegating Control.
+  
+2. Groups which are collections of objects that are used to grant Permissions and Simplify management and allow creates Security Groups or Distribution Groups.
+
+
+Lets start by creating a OU called employees and add groups.
+---
+
+-So lets go to Tools in the top right corner  click it and in the drop down tab find  Active Directory User and Computer. now you should see on the left handside the domain that you have created.(Mine was mydomain.com)   
+
+-Click on the arrow next to it and a drop down should appear with organizational untis.Right click on mydomain and find New hover over it  and there ypu will see oraganizational unit click on it.
+
+-once inside name the Organizational unit Employees then ok.
+
+Now lets create Groups here are the Step to create groups:
+
+1.Find Employees lets create some groups nowy.Right click employees and hover over New and find Group .
+
+2.On this page create your group name Sale Department.(Make sure in Group scope Global is choosen and in Group type make sure Security is choosen then click ok.)
+
+3.Click Employees folder and inside you should see the sales Department in the folder.
+
+-Now lets create a couple more Groups by repeating steps 1-3 above for each Department.(IT Department, Operation Department , HR Department , and Administration Departments)
+
+-Now this is where you will add users in this groups 
+
+ Before Proceding on in Windows Server 25 we need to create our Windows 11 for client side server
+
+ 
+Installing Windows 11 
+--
+
+-To install Windows 11 open Google and typoe in the search box "Download Windows 11" click the link.Scroll down to Windows 11 Disk Image(ISO) for x64 devices,click the drop down button and select the Windows 11 then click comfirm.
+
+-Once the download is finish open up Oracle VitualBox  click on new and name it Windows 11  and go down to ISO Image and chose the file that you just download and open and it will file out the rest of te fields.(Make sure you do not click the box to skip Unattended Installation)
+
+-next tab which is the unattended Install here select the login username and password.(Here im using Cyberman for the username and the password will be password1)
+
+-Next tab is the Hardware where you chose the Base Mermory and the Processors 
+
+- Next tab hard disk here will see he have 80.00GB by default you cna keepthat and click finish.
+
+- Windows 11 should start running automatically if not just click it and click run. Once it starts go through the install  process by selecting language ,keyboard settings and select setup option after those three pages you will come to a Product Key page .
 
 -
+
