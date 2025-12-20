@@ -1,4 +1,4 @@
-Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
+Install of Windows Servers and Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
 ----
 
 Overview:
@@ -193,11 +193,11 @@ Installing Windows 11
 
 -Once the download is finish open up Oracle VitualBox  click on new and name it Windows 11  and go down to ISO Image and chose the file that you just download and open and it will file out the rest of te fields.(Make sure you do not click the box to skip Unattended Installation)
 
--next tab which is the unattended Install here select the login username and password.(Here im using Cyberman for the username and the password will be password1)
+-Next tab which is the unattended Install here select the login username and password.(Here im using Cyberman for the username and the password will be password1)
 
 -Next tab is the Hardware where you chose the Base Mermory and the Processors 
 
-- Next tab hard disk here will see he have 80.00GB by default you cna keepthat and click finish.
+-Next tab hard disk here will see he have 80.00GB by default you cna keepthat and click finish.
 
 - Windows 11 should start running automatically if not just click it and click run. Once it starts go through the install  process by selecting language ,keyboard settings and select setup option after those three pages you will come to a Product Key page selet dont have product key and next.
 
@@ -209,9 +209,29 @@ Installing Windows 11
 
 - After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
 
+- Now we need to create a second Windows11 and name it Windows11-2. So just repeat the same steps above
 
-Now back to Windows Server 2025 to create a Network Between Windows 11 and Windows Server 2025
+
+Now back to Windows Server 2025 to create a Network between Windows 11 & Windows11-2 and Windows Server 2025
 -
+
+In your VitualBox Manager you should have Windows Server 2025 and Windows 11 & Windows11-2 now on your Vitural box.
+
+First lets click on Windows Server 2025 and click on settings.A tab will open on the lefthand side find Network and on the page make sure your in Adapter 1.There you will see "Attached to:" click the drop down and find Internal Network.After clicking Internal network we need to name  it.In the Name section Name it whatever you would like (Im using ADNETWORK & make sure you click the box next to cable connected) click ok.
+
+Now lets work on finishing setting up the Windows11 & 11-2 in a simlar way.
+
+Lets start with Windows 11-2 click on it and go to settings the tab will open on the lefthand side find Network and on the page make sure your in Adapter 1.There you will see "Attached to:" click the drop down and find Internal Network.After clicking Internal network we need to name  it.In the Name section Name it whatever you would like (Im using ADNETWORK & make sure you click the box next to cable connected) click ok.
+  
+Now do the same thing for Windows11.
+
+Once you added the three virtual machines to the same network now we need to configure the IP addresses and subnet mask and DNS for all three machines.
+
+Select Windons Server 2025 and click on start to run the VM.log in with your creditals  that we created earlier(Mine was Password1)
+
+do the same for Windows11 &11-2 all three should be running.
+
+Our next step is to need to set the static IP for all three (important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
 
 
 
