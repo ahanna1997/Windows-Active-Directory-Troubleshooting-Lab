@@ -1,4 +1,4 @@
-Install of Windows Servers and Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
+Install of Windows Servers2025,Windows11 and Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
 ----
 
 Overview:
@@ -234,5 +234,65 @@ do the same for Windows11 &11-2 all three should be running.
 Our next step is to need to set the static IP for all three (important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
 
 
+Lets start with our Windows Server 2025  and there let click on the start icon in Windows server  and find and click into system. On the left hand side find network & internet from there click into ethernet.
+
+There you will see your all your IP assignment and all the IPv4 settings that we configured for the Server when we created the Windows Server 2025. Click  Edit on the right handside.
+
+Once in the IP setting make sure that the following are correct for the Windows Server 2025.
+
+IP address:192.168.1.10
+
+Subnet mask:255.255.255.0
+
+Gateway:192.168.1.1
+
+Preferred DNS: 127.0.0.1
+
+
+Click save and lets move to the Windows11 and Windows11-2
+
+Lets start with Windows11. In the Windows11 VM in the search box type in Control Panel and click into it.Select Network and Internet then Network and Sharing Centre.On the lefthand side you will see chnage adapter setting click the link.
+
+Right click Enthernet and find Properties, in the properties click on Internet Protocol Version 2(TCP/IPv4) and select properties. there we need to change our IP address.(In a real-world scenario you will click on Obtain an IP address automatically becuase it will be obtaining it from DHCP server or from DHCP that is set up on your router but since we are using VM we will configure ours IP address)
+
+Click on Use the following IP address and fillout the fields with whatever you like(Imausing the following:
+Windows11
+IP address:192.168.1.20
+Subnet mask:255.255.255.0
+Default gateway:192.168.1.10(Here we usethe Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+
+Once done click ok. Now do the same thing for Windows11-2.
+
+Windows11-2
+IP address:192.168.1.21
+Subnet mask:255.255.255.0
+Default gateway:192.168.1.10(Here we usethe IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+
+
+
+Now lets do some pinging to check if these three are able to communicate with each other.
+
+Open Windows11-2 and go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
+
+
+Type ping and the IP address  of your Windows Server.(Mine will be ping 192.168.1.10 ). 
+
+
+
+
+
+Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.20) 
+
+
+
+
+
+
+Go to our Windows Server and lets do the same thing by ping both windows 11 computers.go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
+
+Type ping and the IP address  of your Windows11.(Mine will be ping 192.168.1.20 ). 
+
+
+Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.21) 
 
 
