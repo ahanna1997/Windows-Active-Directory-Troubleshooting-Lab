@@ -259,14 +259,22 @@ Click on Use the following IP address and fillout the fields with whatever you l
 Windows11
 IP address:192.168.1.20
 Subnet mask:255.255.255.0
-Default gateway:192.168.1.10(Here we usethe Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+Default gateway:Leave Empty
+
+At the bottom make sure you click:
+
+Preferred DNS:192.168.1.10(Here we usethe Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
 
 Once done click ok. Now do the same thing for Windows11-2.
 
 Windows11-2
 IP address:192.168.1.21
 Subnet mask:255.255.255.0
-Default gateway:192.168.1.10(Here we usethe IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+Default gateway: Leave empty
+
+At the bottom make sure you click:
+
+Preferred DNS: 192.168.1.10(Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
 
 
 
@@ -288,11 +296,28 @@ Now lets ping our Windows11 computer to make sure that the computer is able to t
 
 
 
-Go to our Windows Server and lets do the same thing by ping both windows 11 computers.go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
+Go to our Windows Server and lets do the same thing by ping both windows11 and 11-2 computers.Go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
 
 Type ping and the IP address  of your Windows11.(Mine will be ping 192.168.1.20 ). 
 
 
 Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.21) 
+
+
+
+
+Adding PCs/Computers to Active Directory 
+--
+- Fisrt thing we need to do is add both machines to the domaian to our active directory  from the two Windows11 machines. Get the Windows11 Vm running by starting both Windows11 and 11-2.
+
+- Lets start in Windows 11 and lets add this Windows to our domain. First right click on start icon and find system click on it and here  on the left handside find system again. now on that page scroll to the bottom of the page and find About click into it.
+
+- In the About page find Advance system settings link and click on it.Once the system Properties page  click onthe Computer name tab  and click onto the change button.On the next page at the bottom lets change Member of section from Workgroup to Domain.(We want to change it to Domain because we want to add this Windows machine to the domain that we created in our windows Server which was mydomain.com or whatever you called it)
+
+- After Click ok and a Login popup should be there just login with your login details of your Server administrator.(If you remember our username should be Administrator and the Password should be Password1)
+
+- Thats it you will need to restart your computer do the same thing for Windows11-2.
+
+
 
 
