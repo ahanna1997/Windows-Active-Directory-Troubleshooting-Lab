@@ -209,7 +209,7 @@ Installing Windows 11
 
 - After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
 
-- Now we need to create a second Windows11 and name it Windows11-2. So just repeat the same steps above
+- Now we need to create a second Windows11 and name it Windows11-2. So just repeat the same steps above(Also make User will be cyberman2)
 
 
 Now back to Windows Server 2025 to create a Network between Windows 11 & Windows11-2 and Windows Server 2025
