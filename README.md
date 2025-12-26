@@ -49,6 +49,9 @@ First thing first lets download Windows 2025 from the Microsoft Evaluation Cente
 - Select Image page click "Windows server 2025 Standard Evalution(Desktop Experience)" and next then Accept.
 - next page which is location to install Windows Server should only be one option which is DISK 0 click next and next click Install.
 - Comptuer /Laptop will restart
+
+
+  <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/f329a3b5-b615-413b-9864-2e0adb1d3009" />
 - Once restarted it will prop you to enter a password for that Administrator account. (which will be Password1).
 - On the next page lets login as the Admin.
 - Once logged in on the admin account lets Insert Guest addition CD image by hover to the top of the page and clicking on Devices tab ...go  down to Insert Guest Addtions CD image and click on it.
@@ -58,46 +61,98 @@ First thing first lets download Windows 2025 from the Microsoft Evaluation Cente
 
 Setting up Window Server 2025 and Static IP Configuration
 ---------------
+<img width="310" height="300" alt="Image" src="https://github.com/user-attachments/assets/a12d8754-1b43-4431-a488-7423b8788927" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/b1e57e5e-0bd8-4f61-8381-57b15d3d3523" />
+
+<img width="301" height="401" alt="Image" src="https://github.com/user-attachments/assets/0cc8196f-fc6a-4e39-a139-551d4127fa8b" />
+
 -After creating the admin account lets login useing the password that we used. (Which is Password1)
+
+<img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/c6b04155-9298-4944-80e9-04f61189de0b" />
 
 - Once logged in to the Admin account the first thing that you should see pop up is the Server Manger.If not that's okay you can click on the search box at the bottom of the desktop page and type in Server manager and click on it.
  
 - Now that we are in the server manager let configure the essential settings on the Windows Server.
-  
+
+
 1.Lets start by configuring the host name
 
+  <img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/9f4c886b-a7c7-4edd-bda0-5003a7cd1acd" />
+
 - In server manager lets find local server on the left hand side click it.
+  
+<img width="413" height="333" alt="Image" src="https://github.com/user-attachments/assets/10b11d9f-babd-40c6-a4a6-9b44dd645d00" />
 
 - Properties page should have popped up and you will see Computer name click it to change it name
+  
+<img width="486" height="272" alt="Image" src="https://github.com/user-attachments/assets/b2ab3163-fb4c-4e19-9338-d7e8f838a41b" />
 
 - Once on the next page click change button at the bottom and on the new page you can change the computer name.(Changed mine to Server2025-DC01) and click okay.Will get a prompt that you have to retart your computer to apply changes click restart Now. (In a real world work environment only Server managers with Administrative Rights will be able to change the computer names)
+- 
+<img width="549" height="391" alt="Image" src="https://github.com/user-attachments/assets/cfe83c36-69a8-4b37-bafb-646e2124654c" />
 
 - After restart log back in and go back to server manager and the Local server to check if the computer name has changed.
+  
+<img width="600" height="440" alt="Image" src="https://github.com/user-attachments/assets/5920f130-6c9b-405a-bd52-fdde0568d1ba" />
+  
 
 2.Next the time zone
 
-- To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
+<img width="500" height="600" alt="Image" src="https://github.com/user-attachments/assets/6cd0a631-9294-40c2-9839-74df53c9969d" />
 
-- Once on the page scroll to Time zone and there you can chnage the time zone to whereever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
+- To do this right click on the time and date in the bottom right hand corner and click adjust time and date leading you to the setting page.
+  
+<img width="507" height="454" alt="Image" src="https://github.com/user-attachments/assets/1ceae41d-3a6d-46ee-81c7-4068d35f5695" />
+
+- Once on the page scroll to Time zone and there you can change the time zone to where ever you need the computer to be. Then close the  window.(Once again you need to have Administrative rights to change the same as the one above)
 
       
 3.Then making sure the server is  up to date with the most updated software update(A crucial step for setting up or looking after a Windows Server because installing updates make sure that the windows Servers are on the lastest serurity patches or big fixes and performance enhancements)
 
+<img width="400" height="463" alt="Image" src="https://github.com/user-attachments/assets/7d718360-058e-486f-8668-a519b4397e7a" />
+<img width="400" height="464" alt="Image" src="https://github.com/user-attachments/assets/92b877a9-bf35-471b-be70-aca4bd5669aa" />
+
+
 -To do this lets go to hover or the window icon right click on it  and scroll and click on settings and from there find Windows Update on the left hand side.
 
--on the Windows update poage you will see all the update that are avaiable you can click install all and some updates may require a computer restart click restart.
 
--After restat log back in and check for updates again to see if all were installed and up to date. Close the window.
+<img width="600" height="452" alt="Image" src="https://github.com/user-attachments/assets/795bd396-b5c7-4c7f-9e85-f7881374ad89" />
+
+
+-On the Windows update page you will see all the update that are avaiable you can click install all and some updates may require a computer restart click restart.
+
+-After restart log back in and check for updates again to see if all were installed and up to date. Close the window.
+
+
+<img width="600" height="458" alt="Image" src="https://github.com/user-attachments/assets/b514f935-5882-4515-83a0-9c8d546c73f2" />
+
 
 4.Finally we will configure the Static IP address( Needed as a Window Server should have a static IP address to ensure consist network communication as Dynamic IP address from DHCP could change causing disruption to services like DNS or file sharing)
 
+
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/980d9bd5-2721-422c-b06d-297b684b6453" />
+
+
 -From the  Server Manager dashbard click on local Server on the left hand side there all the properties  will be show and let find the Ethernet section and click the that link to change it.(Should have IPv4 address assigned by DHCP,IPv6 enabled by default)
 
--once click on it right click on ethernet and then properties then on the Ethernet properties popup lets find and click on Internet Protocol version 4(TCP/IPv4) and click on properties.
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/02cd76b9-de3d-47f6-8121-f365c95f78b6" />
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/83cdf3f2-999a-4697-823b-cb66ca0f1a12" />
+<img width="300" height="408" alt="Image" src="https://github.com/user-attachments/assets/c8afbba1-a964-4213-81ed-38fc03496a23" />
+
+
+-Once click on it right click on ethernet and then properties then on the Ethernet properties popup lets find and click on Internet Protocol version 4(TCP/IPv4) and click on properties.
+
+<img width="300" height="436" alt="Image" src="https://github.com/user-attachments/assets/e8619581-e242-46df-a7a7-bac3bfe2053f" />
+
 
 -On the General page lets click on the second option which is Use te following IP address so we can configure them. For Ip address lets add 192.168.1.10 then sudnet mask click on the field and it should automatically fill it  and for default gateway  lets add 192.168.1.1. 
-
 -At the bottom for preferred DNS Server 127.0.0.1 if the server will act as DNS server otherwise use the network primary and click ok once done.
+
+<img width="300" height="500" alt="Image" src="https://github.com/user-attachments/assets/3bf87860-e2f6-4340-b000-ab1bbd76dfd9" />
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/8e4f5241-4e41-405a-9a2f-0eb317eb98a5" />
+<img width="300" height="439" alt="Image" src="https://github.com/user-attachments/assets/5261633b-39db-466e-8ead-3ea6d212bd83" />
+
 
 -Now lets open up our Command Prompt (CMD) by find the search box and typing in CMD open it.In the CMD let type ipconfig for check the Windows IP Configuration and there you should be able to see everything that you just change in the steps above.(If you want to see more info you can type ipconfig /all and it will give more of the Window Server properties)
 
@@ -188,18 +243,29 @@ Now lets create Groups here are the Step to create groups:
  
 Installing Windows 11 
 --
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/307ab102-1dd1-4b36-a0f6-2904002e5501" /> <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/836da463-c320-49d0-81d5-549c7526db6a" />
 
 -To install Windows 11 open Google and typoe in the search box "Download Windows 11" click the link.Scroll down to Windows 11 Disk Image(ISO) for x64 devices,click the drop down button and select the Windows 11 then click comfirm.
 
--Once the download is finish open up Oracle VitualBox  click on new and name it Windows 11  and go down to ISO Image and chose the file that you just download and open and it will file out the rest of te fields.(Make sure you do not click the box to skip Unattended Installation)
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/988211ce-4fca-439c-8c2c-75a7f0480bb3" />
+
+-Once the download is finish open up Oracle VitualBox  click on new and name it Windows 11  and go down to ISO Image and chose the file that you just download and open and it will file out the rest of te fields.(Make sure you do have the box clicked to skip Unattended Installation)
+
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/91d27215-428a-415f-9f37-8f8c69e3df50" />
 
 -Next tab which is the unattended Install here select the login username and password.(Here im using Cyberman for the username and the password will be password1)
 
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/266a08aa-8da7-4ce4-a67f-7c7621126a4c" />
+
 -Next tab is the Hardware where you chose the Base Mermory and the Processors 
+
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/b4e418af-bccd-4f2d-be9b-f3d4792a782c" />
 
 -Next tab hard disk here will see he have 80.00GB by default you cna keepthat and click finish.
 
 - Windows 11 should start running automatically if not just click it and click run. Once it starts go through the install  process by selecting language ,keyboard settings and select setup option after those three pages you will come to a Product Key page selet dont have product key and next.
+- 
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/4d3d700f-ebb7-430a-8c3a-cbd90a63b0a7" />
 
 - Next page select Windows 11 Pro as the OS and next Accept the term and conditions and click next on the Loction to install Windows11 and then Install and it will start installing Windows 11.
 
