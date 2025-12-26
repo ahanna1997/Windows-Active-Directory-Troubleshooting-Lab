@@ -52,6 +52,7 @@ First thing first lets download Windows 2025 from the Microsoft Evaluation Cente
 
 
   <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/f329a3b5-b615-413b-9864-2e0adb1d3009" />
+  
 - Once restarted it will prop you to enter a password for that Administrator account. (which will be Password1).
 - On the next page lets login as the Admin.
 - Once logged in on the admin account lets Insert Guest addition CD image by hover to the top of the page and clicking on Devices tab ...go  down to Insert Guest Addtions CD image and click on it.
@@ -67,7 +68,9 @@ Setting up Window Server 2025 and Static IP Configuration
 
 <img width="301" height="401" alt="Image" src="https://github.com/user-attachments/assets/0cc8196f-fc6a-4e39-a139-551d4127fa8b" />
 
+
 -After creating the admin account lets login useing the password that we used. (Which is Password1)
+
 
 <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/c6b04155-9298-4944-80e9-04f61189de0b" />
 
@@ -171,41 +174,94 @@ Here we will be doing 2 critical task:
 
 Let's start with Installing the AD DS role.
 
--In Server Manager you can click on Add other servers to manage or you cna go to the top right corner and click on "Manage" then add roles and feature.
+
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/d0c98df9-4117-41e3-9abc-3c6fa8c63fb8" />
+<img width="294" height="205" alt="Image" src="https://github.com/user-attachments/assets/4c085571-bb10-447c-bdc1-c5a2a934a705" />
+
+-In Server Manager you can click on Add other servers to manage or you can go to the top right corner and click on "Manage" then add roles and feature.
+
+<img width="409" height="284" alt="Image" src="https://github.com/user-attachments/assets/47119434-eb8b-4a65-87da-c8d0382d628d" />
 
 -You should see this pages.
+
 +Before you begin page,click next.
-+Select installation type (By default it will chose Role-based orfeature-based installation) click next.
+
+<img width="445" height="315" alt="Image" src="https://github.com/user-attachments/assets/efd4e3e4-d2a5-4b7a-8ff9-daaf3c02bb6e" />
+
++Select installation type (By default it will chose Role-based or feature-based installation) click next.
+
+<img width="427" height="313" alt="Image" src="https://github.com/user-attachments/assets/9bd284b4-419a-439e-a634-c88a1ad7d628" />
+
 +Select destination server.(Which should be the server that you have created in the step above mine was Server2025-DC01)Select the Server should be the on you created by default  and hit next.
-+ Select the server roles so here you select Active directory domain services once selected a pop up window will saying add features ,click the box and click Add Features nd then next.
+
+
+<img width="533" height="437" alt="Image" src="https://github.com/user-attachments/assets/86cdf425-a30a-4c37-a234-21be12512e5e" />
+
++ Select the server roles so here you select Active directory domain services once selected a pop up window will saying add features ,click the box and click Add Features and then next.
+
+  
+  <img width="428" height="313" alt="Image" src="https://github.com/user-attachments/assets/3ce73e3a-29b1-4e5e-907f-911047a645a9" />
+
 + Next page is the AD DS just click next nothing to do on that page.
+
+  
+<img width="527" height="458" alt="Image" src="https://github.com/user-attachments/assets/33564c19-11a7-486f-8119-79908b829c85" />
+
 + Finally on the last page click Install .
 
 After install we have to promote the server to a DC.(very important  because it actives AD DS snd sets up the first domain in a new forest establishing the foundation for managing network resources securely)
 
--So in the Server Manager in the right hand corner you will see a flag with a Yellow caution symbol thats the notification center, click it  and ypou will see  as the very first option promote server this server to a DC click the link. 
+<img width="329" height="155" alt="Image" src="https://github.com/user-attachments/assets/68d139ed-07f0-4591-833c-cc25a5f4a2af" />
+<img width="386" height="215" alt="Image" src="https://github.com/user-attachments/assets/2c5e18fa-884f-45c0-8701-e9206bd0bf59" />
+
+-So in the Server Manager in the right hand corner you will see a flag with a Yellow caution symbol thats the notification center, click it  and you will see  as the very first option promote server this server to a DC click the link. 
+
+<img width="407" height="308" alt="Image" src="https://github.com/user-attachments/assets/9a5f453d-6eb3-429f-9dd0-4f3b29bc4a70" />
 
 -On the pop up window it should be the Deployment Configuraton so here we want to create/Add a new Forest and we will have to make a Root domain Name for the forest .(Can be anything you like Im going to use mydomain.com) Click next
 
--On th DC options page it should default to the ;lastest Option unless you have to select a backward compatiblity than no need to change.After that set the Directory Service Restore Mode (DSRM) password (Im using Password1) click next.
+<img width="420" height="305" alt="Image" src="https://github.com/user-attachments/assets/cdadc9c2-635f-4b7d-9841-2574b5b4c2ff" />
+<img width="394" height="290" alt="Image" src="https://github.com/user-attachments/assets/e670fa25-ca26-4379-9c76-0f30eb8df2ce" />
 
--Next page you willsee a warning but that okay click next.
+-On th DC options page it should default to the lastest Option unless you have to select a backward compatiblity than no need to change.After that set the Directory Service Restore Mode (DSRM) password (Im using Password1) click next.
+
+<img width="389" height="137" alt="Image" src="https://github.com/user-attachments/assets/8e6ae801-ec3e-4472-9500-f1c1a5e114b2" />
+
+-Next page you will see a warning but that okay click next.
+
+<img width="433" height="311" alt="Image" src="https://github.com/user-attachments/assets/ebec3a7c-b8a5-4896-a6b0-7d872260f5e8" />
 
 -on the next page is were you specify the net bios domain name it should be based off of your root domain name.(my root domain is mydomain.com so my bios domain will by MYDOMAIN) Click next.
 
--Next page Paths is a default you cn leave them.(You will only need to modify them if your server has a separate drives for performance or redundancy)Click next.
+<img width="410" height="301" alt="Image" src="https://github.com/user-attachments/assets/4e838f59-7330-4ac2-b2eb-e19b52011b9b" />
+
+-Next page Paths is a default you can leave them.(You will only need to modify them if your server has a separate drives for performance or redundancy)Click next.
+
+<img width="416" height="316" alt="Image" src="https://github.com/user-attachments/assets/af3f88c2-ce48-4379-8970-5c2bae2420c1" />
 
 -Next page is just the review page click next.
 
+<img width="433" height="319" alt="Image" src="https://github.com/user-attachments/assets/26afabe1-9dd8-49c4-90ef-5f423058af8c" />
+<img width="431" height="304" alt="Image" src="https://github.com/user-attachments/assets/e064397d-422a-49ce-b765-f56a2c675947" />
+
+
 -Now the next page the prerequisites check page  just basically check to make sure the server meets all the requirements. After the server check hit install and computer will restart after Install.
+
+<img width="600" height="960" alt="Image" src="https://github.com/user-attachments/assets/1dcfa65c-ff1e-4a33-963f-2326585decea" />
 
 -After restrart you can should see then login page.You should now see that you are now in the DC by seeing MYDOMAIN\Admistrator or what you have named your DC.(Mine was MYDOMAIN)
 
+
+<img width="536" height="349" alt="Image" src="https://github.com/user-attachments/assets/33343d70-411a-419e-92cd-130277484fc7" />
+<img width="224" height="338" alt="Image" src="https://github.com/user-attachments/assets/f98ebeaa-b3aa-4821-b4ef-b434dd5e2a2f" />
+
 -Login into Server with the password you created.Once logged in lets verify that the DC in the server Manager on the left had side you should now see AD DS & DNS. If you see those lets go to Tools at the top right corner and click tools.In the drop down you want to make sure you have three things: Active Directory User and Computers ,DNS,and Group Policy management.If you see all three lets proceed.
 
--Now we test the DNS resolution. Go to the search box and search Command Prompt and enter.
 
--Once the CMD is open type in nslookup  and whatever your domain is. (Mine is nslook mydomain.com ) 
+
+<img width="551" height="397" alt="Image" src="https://github.com/user-attachments/assets/c2c87522-4f10-4a4d-bdcf-cf9d073bca13" />
+
+-Now we test the DNS resolution. Go to the search box and search Command Prompt and enter.Once the CMD is open type in nslookup  and whatever your domain is. (Mine is nslook mydomain.com ) 
 
 
 Active Directory Organizational Units(OUs) & Groups
