@@ -1,4 +1,4 @@
-Install of Windows Servers2025,Windows11 and Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
+Install of Windows Servers2025, Windows11 and Active Directory Troubleshooting Lab Summary (Oracle VituralBox)
 ----
 
 Overview:
@@ -23,16 +23,22 @@ Skills Demonstrated:
 
 Lets create the Active Diretory using Windows Server 2025
 -----
+<img width="796" height="307" alt="Image" src="https://github.com/user-attachments/assets/6e2692da-c95c-438b-87fc-b3b6bf0f958d" />
 
 First thing first lets download Windows 2025 from the Microsoft Evaluation Center by just going to Google and search for "Windows Server 2025".
 
+<img width="1770" height="713" alt="Image" src="https://github.com/user-attachments/assets/78f8ab1b-058f-4fef-9cb5-a5113fe0388b" />
+
 -Click the link and on the Microsoft page you should see Windows Server 2025 scroll down where you see "Download this ISO"and click it leading to the download page  and Click on English (Untied States) ISO download the 64-bit editon for this is the one that I will be using.
 
-- In Orcale VitualBox  lets click on the New icon in the top left corner and the Create Virtual Machine page should popup.
+- In Orcale VitualBox lets click on the New icon in the top left corner and the Create Virtual Machine page should popup.
   
 - On that page fill out all the sections with:
+  
   Name: Windows Server 2025(or whatever you want to call it)
-  ISO image: Using that Windows Server 2025 ISO I just downloaded in the step above you want to find it wherever you saved it and click it. After click that it will fillout the fields for you. Also once all the other fields are filled at the bottom you will see a check box which says Skip Unattended Installation make sure you check that box.
+  
+  ISO image: Using that Windows Server 2025 ISO I just downloaded in the step above you want to find it wherever you saved it and click it. After click that it will fillout the fields for you. Also once all the other fields are filled at the bottom you will see a check box which says Proceed with Unattended Installation make sure you uncheck that box.
+
   
 - Next go down to Hardware where you can choose the Base Memory and Processors.(Recommand using atleast 2048 MB+ and 3 CPU+  depending on how much Hardware space that you have on your computer or laptop) Also make sure to click that check box that says Enable EFI(Special OSes only).
 
