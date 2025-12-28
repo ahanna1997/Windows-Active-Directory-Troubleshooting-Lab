@@ -331,9 +331,26 @@ Installing Windows 11
 
 - Next page select Windows 11 Pro as the OS and next Accept the term and conditions and click next on the Loction to install Windows11 and then Install and it will start installing Windows 11.
 
-- After the install  fill out the pages that are presented at the end the Windows update page should start and let it download.after update fill out all the Page after that.Windows 11 shpuld be install and operating on your Vitualbox.
+- After the install fill out the pages that are presented at the end the Windows update page should start and let it download.After update fill out all the Page after that.Windows 11 should be install and operating on your Vitualbox.
 
-- Now once on the desktop of Windows 11  let insert Guest Additions CD images by hitting Control F on your keyboard snd clicking devices at the top of the page and hovering down to Insert Guest Additions CD Image .Once you do tha like on the Folder on the Windows 11 desktop  and in thae folder find This PC on the left handside and click the CD Drive(D:) VirtualBox Guest Addtions and inside find VboxWindowsAddons double click it and hit install and you will need to Reboot.
+<img width="300" height="411" alt="Image" src="https://github.com/user-attachments/assets/4b3f6fca-8854-4b53-9cb1-9bc57c8ef852" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/4dda6b7e-02aa-423b-ad15-6c4260a4f8ca" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/f8cb3373-178c-4a2d-a177-4f91d5f28fb1" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/fd07bf60-7a3d-4b55-b020-abf50315502e" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/c0d3d070-3610-475f-bf7b-c6f3dfdb4f60" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/f270c025-2f16-4942-a15b-4e004b500910" />
+
+<img width="300" height="400" alt="Image" src="https://github.com/user-attachments/assets/9860e9e3-d63b-495c-b143-7bf3b9b45407" />
+
+
+- Now once on the desktop of Windows 11  let insert Guest Additions CD images by hitting Control F on your keyboard and clicking devices at the top of the page and hovering down to Insert Guest Additions CD Image .Once you do tha like on the Folder on the Windows 11 desktop  and in thae folder find This PC on the left handside and click the CD Drive(D:) VirtualBox Guest Addtions and inside find VboxWindowsAdditions double click it and go through all the propped pages then install and you will need to Reboot.
+
+<img width="1212" height="552" alt="Image" src="https://github.com/user-attachments/assets/267c00e7-614b-4787-aef1-486cf89f3db1" />
 
 - After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
 
