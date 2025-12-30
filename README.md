@@ -350,9 +350,11 @@ Installing Windows 11
 
 - Now once on the desktop of Windows 11  let insert Guest Additions CD images by hitting Control F on your keyboard and clicking devices at the top of the page and hovering down to Insert Guest Additions CD Image .Once you do tha like on the Folder on the Windows 11 desktop  and in thae folder find This PC on the left handside and click the CD Drive(D:) VirtualBox Guest Addtions and inside find VboxWindowsAdditions double click it and go through all the propped pages then install and you will need to Reboot.
 
-<img width="1212" height="552" alt="Image" src="https://github.com/user-attachments/assets/267c00e7-614b-4787-aef1-486cf89f3db1" />
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/267c00e7-614b-4787-aef1-486cf89f3db1" />
 
 - After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
+  
+<img width="1095" height="822" alt="Image" src="https://github.com/user-attachments/assets/44f7b77d-c2c8-44f1-aa5e-9d7516aa7a59" />
 
 - Now we need to create a second Windows11 and name it Windows11-2. So just repeat the same steps above(Also make User will be cyberman2)
 
@@ -379,7 +381,7 @@ do the same for Windows11 &11-2 all three should be running.
 Our next step is to need to set the static IP for all three (important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
 
 
-Lets start with our Windows Server 2025  and there let click on the start icon in Windows server  and find and click into system. On the left hand side find network & internet from there click into ethernet.
+Lets start with our Windows Server 2025  and there lets right click on the start icon in Windows server and find and click into system. On the left hand side find network & internet from there click into ethernet.
 
 There you will see your all your IP assignment and all the IPv4 settings that we configured for the Server when we created the Windows Server 2025. Click  Edit on the right handside.
 
@@ -396,19 +398,22 @@ Preferred DNS: 127.0.0.1
 
 Click save and lets move to the Windows11 and Windows11-2
 
-Lets start with Windows11. In the Windows11 VM in the search box type in Control Panel and click into it.Select Network and Internet then Network and Sharing Centre.On the lefthand side you will see chnage adapter setting click the link.
+Lets start with Windows11. In the Windows11 VM in the search box type in Control Panel and click into it. Select Network and Internet then Network and Sharing Centre. On the lefthand side you will see change adapter setting click the link.
 
-Right click Enthernet and find Properties, in the properties click on Internet Protocol Version 2(TCP/IPv4) and select properties. there we need to change our IP address.(In a real-world scenario you will click on Obtain an IP address automatically becuase it will be obtaining it from DHCP server or from DHCP that is set up on your router but since we are using VM we will configure ours IP address)
+Right click Enthernet and find Properties, in the properties click on Internet Protocol Version 2 (TCP/IPv4) and select properties. there we need to change our IP address. (In a real-world scenario you will click on Obtain an IP address automatically becuase it will be obtaining it from DHCP server or from DHCP that is set up on your router but since we are using VM we will configure ours IP address.)
 
 Click on Use the following IP address and fillout the fields with whatever you like(Imausing the following:
 Windows11
+
 IP address:192.168.1.20
+
 Subnet mask:255.255.255.0
+
 Default gateway:Leave Empty
 
 At the bottom make sure you click:
 
-Preferred DNS:192.168.1.10(Here we usethe Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+Preferred DNS:192.168.1.10 (Here we use the Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
 
 Once done click ok. Now do the same thing for Windows11-2.
 
@@ -419,7 +424,7 @@ Default gateway: Leave empty
 
 At the bottom make sure you click:
 
-Preferred DNS: 192.168.1.10(Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+Preferred DNS: 192.168.1.10 (Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
 
 
 
