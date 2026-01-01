@@ -284,7 +284,7 @@ Lets start by creating a OU called employees and add groups.
 
 -So lets go to Tools in the top right corner  click it and in the drop down tab find  Active Directory User and Computer. now you should see on the left handside the domain that you have created.(Mine was mydomain.com)   
 
--Click on the arrow next to it and a drop down should appear with organizational untis.Right click on mydomain and find New hover over it  and there ypu will see oraganizational unit click on it.
+-Click on the arrow next to it and a drop down should appear with organizational untis.Right click on mydomain and find New hover over it  and there you will see oraganizational unit click on it.
 
 -once inside name the Organizational unit Employees then ok.
 
@@ -354,7 +354,7 @@ Installing Windows 11
 
 - After the reboot login using the password you created for that account. (Mine was password1) and windows 11 is good to good on your Virtual Box.
   
-<img width="1095" height="822" alt="Image" src="https://github.com/user-attachments/assets/44f7b77d-c2c8-44f1-aa5e-9d7516aa7a59" />
+<img width="400" height="522" alt="Image" src="https://github.com/user-attachments/assets/44f7b77d-c2c8-44f1-aa5e-9d7516aa7a59" />
 
 - Now we need to create a second Windows11 and name it Windows11-2. So just repeat the same steps above(Also make User will be cyberman2)
 
@@ -364,26 +364,54 @@ Now back to Windows Server 2025 to create a Network between Windows 11 & Windows
 
 In your VitualBox Manager you should have Windows Server 2025 and Windows 11 & Windows11-2 now on your Vitural box.
 
+<img width="418" height="458" alt="Image" src="https://github.com/user-attachments/assets/81f19293-849d-41c6-8a57-c464f3d986bb" />
+
+<img width="575" height="453" alt="Image" src="https://github.com/user-attachments/assets/8008e6c9-e701-4ecd-85ba-3accd9a9a0cc" />
+
+
 First lets click on Windows Server 2025 and click on settings.A tab will open on the lefthand side find Network and on the page make sure your in Adapter 1.There you will see "Attached to:" click the drop down and find Internal Network.After clicking Internal network we need to name  it.In the Name section Name it whatever you would like (Im using ADNETWORK & make sure you click the box next to cable connected) click ok.
 
 Now lets work on finishing setting up the Windows11 & 11-2 in a simlar way.
 
-Lets start with Windows 11-2 click on it and go to settings the tab will open on the lefthand side find Network and on the page make sure your in Adapter 1.There you will see "Attached to:" click the drop down and find Internal Network.After clicking Internal network we need to name  it.In the Name section Name it whatever you would like (Im using ADNETWORK & make sure you click the box next to cable connected) click ok.
+<img width="584" height="489" alt="Image" src="https://github.com/user-attachments/assets/92a0ea4f-d53e-4079-9c21-9e31fa720e13" />
+
+<img width="590" height="489" alt="Image" src="https://github.com/user-attachments/assets/199b7a11-8baa-4f32-9242-5032e9da84eb" />
+
+<img width="586" height="448" alt="Image" src="https://github.com/user-attachments/assets/f2276c8d-e240-499e-85e0-cc1bde5836ab" />
+
+Lets start with Windows 11-2 click on it and go to settings the tab will open on the lefthand side find Network and on the page make sure your in Adapter 1.There you will see "Attached to:" click the drop down and find Internal Network.After clicking Internal network we need to name  it.In the Name section Name it whatever you would like (I'm using ADNETWORK & make sure you click the box next to cable connected) click ok.
+
+<img width="575" height="465" alt="Image" src="https://github.com/user-attachments/assets/0eb97701-8066-4d04-b56c-1f6edabe8d43" />
+
+<img width="586" height="495" alt="Image" src="https://github.com/user-attachments/assets/691f56ee-c5d0-4ec3-a635-81bc0fd77810" />
+
+<img width="587" height="486" alt="Image" src="https://github.com/user-attachments/assets/6de4bd2d-4cf3-4beb-8f0e-49cbe61659d6" />
   
 Now do the same thing for Windows11.
 
 Once you added the three virtual machines to the same network now we need to configure the IP addresses and subnet mask and DNS for all three machines.
 
+<img width="443" height="433" alt="Image" src="https://github.com/user-attachments/assets/35ea3f5f-9384-441d-94e6-bb2f661eff59" />
+
 Select Windons Server 2025 and click on start to run the VM.log in with your creditals  that we created earlier(Mine was Password1)
 
-do the same for Windows11 &11-2 all three should be running.
+do the same for Windows11 & 11-2 all three should be running.
 
-Our next step is to need to set the static IP for all three (important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
+Our next step is to need to set the static IP for all three (Important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
 
+<img width="400" height="526" alt="Image" src="https://github.com/user-attachments/assets/ac154290-57c3-42ef-8abe-0ddff67f6ebf" />
 
-Lets start with our Windows Server 2025  and there lets right click on the start icon in Windows server and find and click into system. On the left hand side find network & internet from there click into ethernet.
+<img width="400" height="658" alt="Image" src="https://github.com/user-attachments/assets/3381dda8-0ae6-439d-91f4-8f5127e34db9" />
 
-There you will see your all your IP assignment and all the IPv4 settings that we configured for the Server when we created the Windows Server 2025. Click  Edit on the right handside.
+<img width="442" height="522" alt="Image" src="https://github.com/user-attachments/assets/ad824667-1f97-4acd-9f0f-26b54efd7047" />
+
+Lets start with our Windows Server 2025  and there right click on the start icon in Windows server and find and click into system. On the left hand side find network & internet from there click into ethernet.
+
+<img width="433" height="323" alt="Image" src="https://github.com/user-attachments/assets/6d80a2c4-6600-49d7-8911-fefff5a436a6" />
+
+You will see your all your IP assignment and all the IPv4 settings that we configured for the Server when we created the Windows Server 2025. Click  Edit on the right handside.
+
+<img width="433" height="323" alt="Image" src="https://github.com/user-attachments/assets/e5ada433-f102-4912-a5c4-4954e86d619d" />
 
 Once in the IP setting make sure that the following are correct for the Windows Server 2025.
 
@@ -398,11 +426,28 @@ Preferred DNS: 127.0.0.1
 
 Click save and lets move to the Windows11 and Windows11-2
 
+
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/563cd3cc-e768-4ebe-872d-27ed3b71c8e0" />
+
+<img width="400" height="422" alt="Image" src="https://github.com/user-attachments/assets/13fc1e7d-6d3d-4f88-9abc-10729bacb7a0" />
+
+<img width="413" height="325" alt="Image" src="https://github.com/user-attachments/assets/5368c182-d149-45ab-a2e1-7b0254c4a01c" />
+
+<img width="402" height="300" alt="Image" src="https://github.com/user-attachments/assets/81a17858-899f-44c1-bf77-32331ce0eb15" />
+
+
 Lets start with Windows11. In the Windows11 VM in the search box type in Control Panel and click into it. Select Network and Internet then Network and Sharing Centre. On the lefthand side you will see change adapter setting click the link.
+
+
+<img width="400" height="540" alt="Image" src="https://github.com/user-attachments/assets/e12eba60-8c7f-48b4-96af-3c14e2a496d9" />
+
+<img width="427" height="519" alt="Image" src="https://github.com/user-attachments/assets/a3d8d3f4-cc58-4674-8304-82372efbda72" />
 
 Right click Enthernet and find Properties, in the properties click on Internet Protocol Version 2 (TCP/IPv4) and select properties. there we need to change our IP address. (In a real-world scenario you will click on Obtain an IP address automatically becuase it will be obtaining it from DHCP server or from DHCP that is set up on your router but since we are using VM we will configure ours IP address.)
 
-Click on Use the following IP address and fillout the fields with whatever you like(Imausing the following:
+<img width="427" height="346" alt="Image" src="https://github.com/user-attachments/assets/34c3f47a-4c6b-4449-ae13-7a48f787527c" />
+
+Click on Use the following IP address and fillout the fields with whatever you like(Im using the following:
 Windows11
 
 IP address:192.168.1.20
@@ -415,11 +460,16 @@ At the bottom make sure you click:
 
 Preferred DNS:192.168.1.10 (Here we use the Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
 
+<img width="400" height="654" alt="Image" src="https://github.com/user-attachments/assets/d56bfeca-aa2f-464d-921e-061461a8f85d" />
+
 Once done click ok. Now do the same thing for Windows11-2.
 
 Windows11-2
+
 IP address:192.168.1.21
+
 Subnet mask:255.255.255.0
+
 Default gateway: Leave empty
 
 At the bottom make sure you click:
@@ -433,7 +483,7 @@ Now lets do some pinging to check if these three are able to communicate with ea
 Open Windows11-2 and go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
 
 
-Type ping and the IP address  of your Windows Server.(Mine will be ping 192.168.1.10 ). 
+Type ping and the IP address  of your Windows Server.(Mine will be ping 192.168.1.10). 
 
 
 
