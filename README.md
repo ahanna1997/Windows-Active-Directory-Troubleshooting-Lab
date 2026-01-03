@@ -282,15 +282,15 @@ In the section we will create our
 Lets start by creating a OU called employees and add groups.
 ---
 
--So lets go to Tools in the top right corner  click it and in the drop down tab find  Active Directory User and Computer. now you should see on the left handside the domain that you have created.(Mine was mydomain.com)   
+-Power on Windows Server 2025 login and in Server Manager lets go to Tools in the top right corner  click it and in the drop down tab find  Active Directory User and Computer. now you should see on the left handside the domain that you have created.(Mine was mydomain.com)   
 
--Click on the arrow next to it and a drop down should appear with organizational untis.Right click on mydomain and find New hover over it  and there you will see oraganizational unit click on it.
+-Click on the arrow next to it and a drop down should appear with all the organizational untis.Right click on mydomain and find New hover over it  and there you will see oraganizational unit click on it.
 
 -once inside name the Organizational unit Employees then ok.
 
 Now lets create Groups here are the Step to create groups:
 
-1.Find Employees lets create some groups nowy.Right click employees and hover over New and find Group .
+1.Find Employees lets create some groups now.Right click employees and hover over New and find Group .
 
 2.On this page create your group name Sale Department.(Make sure in Group scope Global is choosen and in Group type make sure Security is choosen then click ok.)
 
