@@ -279,20 +279,39 @@ In the section we will create our
 2. Groups which are collections of objects that are used to grant Permissions and Simplify management and allow creates Security Groups or Distribution Groups.
 
 
-Lets start by creating a OU called employees and add groups.
+Creating a OU called employees and add groups.
 ---
+<img width="215" height="92" alt="Image" src="https://github.com/user-attachments/assets/1e677f5c-c37c-4985-b501-fae76bf39f50" />
+
+<img width="643" height="385" alt="Image" src="https://github.com/user-attachments/assets/99bcfbd3-ac24-40f4-bd12-37f2e9d40378" />
+
+<img width="327" height="178" alt="Image" src="https://github.com/user-attachments/assets/47df968d-61b3-45c4-8a0f-613a8de5bc76" />
 
 -Power on Windows Server 2025 login and in Server Manager lets go to Tools in the top right corner  click it and in the drop down tab find  Active Directory User and Computer. now you should see on the left handside the domain that you have created.(Mine was mydomain.com)   
 
+
+<img width="296" height="116" alt="Image" src="https://github.com/user-attachments/assets/2dd089f0-d7d9-494f-9980-16ba76b8ce29" />
+
+<img width="334" height="254" alt="Image" src="https://github.com/user-attachments/assets/6446c796-19aa-43ff-898c-11d22b23a354" />
+
+<img width="331" height="269" alt="Image" src="https://github.com/user-attachments/assets/73d3f9b6-8847-489d-bae9-f40d8ea53a87" />
+
 -Click on the arrow next to it and a drop down should appear with all the organizational untis.Right click on mydomain and find New hover over it  and there you will see oraganizational unit click on it.
 
--once inside name the Organizational unit Employees then ok.
+<img width="308" height="229" alt="Image" src="https://github.com/user-attachments/assets/68029f3b-adba-4956-8475-db7fb4be4e66" />
+-Once inside name the Organizational unit "Employees" then ok.
 
 Now lets create Groups here are the Step to create groups:
 
+<img width="289" height="215" alt="Image" src="https://github.com/user-attachments/assets/3fe0d318-843b-463b-8ac1-9d8ad038757e" />
+
 1.Find Employees lets create some groups now.Right click employees and hover over New and find Group .
 
+<img width="383" height="262" alt="Image" src="https://github.com/user-attachments/assets/5b887f5e-24f7-4a07-99f4-4c8e4fce3460" />
+
 2.On this page create your group name Sale Department.(Make sure in Group scope Global is choosen and in Group type make sure Security is choosen then click ok.)
+
+<img width="390" height="268" alt="Image" src="https://github.com/user-attachments/assets/ead5eaa5-ce95-46fc-8b76-a5c534d6ac23" />
 
 3.Click Employees folder and inside you should see the sales Department in the folder.
 
@@ -360,7 +379,7 @@ Installing Windows 11
 
 
 Now back to Windows Server 2025 to create a Network between Windows 11 & Windows11-2 and Windows Server 2025
--
+----
 
 In your VitualBox Manager you should have Windows Server 2025 and Windows 11 & Windows11-2 now on your Vitural box.
 
@@ -395,7 +414,7 @@ Once you added the three virtual machines to the same network now we need to con
 
 Select Windons Server 2025 and click on start to run the VM.log in with your creditals  that we created earlier(Mine was Password1)
 
-do the same for Windows11 & 11-2 all three should be running.
+Do the same for Windows11 & 11-2 all three should be running.
 
 Our next step is to need to set the static IP for all three (Important to do this because each machine requires a unique static IP to communicate with the network and the windows 11 machines  need to use the Windows Servers as their DNS server to resolve the domain name) 
 
@@ -454,11 +473,11 @@ IP address:192.168.1.20
 
 Subnet mask:255.255.255.0
 
-Default gateway:Leave Empty
+Default gateway:192.168.1.10 (Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server)
 
 At the bottom make sure you click:
 
-Preferred DNS:192.168.1.10 (Here we use the Ip address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
+Preferred DNS:Leave Empty 
 
 <img width="400" height="654" alt="Image" src="https://github.com/user-attachments/assets/d56bfeca-aa2f-464d-921e-061461a8f85d" />
 
@@ -470,45 +489,48 @@ IP address:192.168.1.21
 
 Subnet mask:255.255.255.0
 
-Default gateway: Leave empty
+Default gateway: 192.168.1.10(Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server)
 
 At the bottom make sure you click:
 
-Preferred DNS: 192.168.1.10 (Here we use the IP address of the of the Windows Server 2025 because the machines will be connecting or talking  our windows Server) 
-
+Preferred DNS:  Leave Empty 
 
 
 Now lets do some pinging to check if these three are able to communicate with each other.
 
-Open Windows11-2 and go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
+<img width="420" height="316" alt="Image" src="https://github.com/user-attachments/assets/2fc56d78-5be9-4bb5-a080-a39e976640dc" />
+
+Before pinging your Windows11 VM make sure that if use are Windows OS to turn off Windows Defender Firewall. I was pinging in my CMD and could not ping windows11 & 11-2 machines until I turned them off lol trail and error ( you will see in my picture below.
+ when pinging for Windows Server 2025)
+ 
+<img width="544" height="422" alt="Image" src="https://github.com/user-attachments/assets/891c5bbf-025c-4b1a-9036-d963f5d55e3b" />
+
+Open Windows11-2 and go to CMD of the computer by searching it. Once in the command prompt let's ping our Server.
+
+<img width="500" height="415" alt="Image" src="https://github.com/user-attachments/assets/64e43bdd-3966-47eb-a6f9-273c6fc43b12" />
+
+Type ping the IP address of your Windows Server2025 (Mine will be ping 192.168.1.10)and  ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.20) 
 
 
-Type ping and the IP address  of your Windows Server.(Mine will be ping 192.168.1.10). 
 
+<img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/692045e9-fe22-48c0-9f24-dfd1506a263d" />
 
+Do the same for Windows 11 and ping the Server(ping 192.168.1.10) and Windows11-2(ping 192.168.1.21)
 
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/d5b01153-8241-4b07-ad6d-ffd894d7a3cc" />
 
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/cd95e38e-1a27-4e68-9929-e4bc587a7d12" />
 
-Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.20) 
+<img width="400" height="500" alt="Image" src="https://github.com/user-attachments/assets/1cf538b0-be00-481c-ab61-f7734cacfad6" />
 
+Go to our Windows Server and lets do the same thing by ping both windows11 and 11-2 computers.Go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.Type ping and the IP address  of your Windows11.(Mine will be ping 192.168.1.20 ). Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.21) 
 
-
-
-
-
-Go to our Windows Server and lets do the same thing by ping both windows11 and 11-2 computers.Go to CMD of the computer by searching it. Once in the command prompt lets ping our Server.
-
-Type ping and the IP address  of your Windows11.(Mine will be ping 192.168.1.20 ). 
-
-
-Now lets ping our Windows11 computer to make sure that the computer is able to talk (Mine will be ping 192.168.1.21) 
-
-
+Now all three machines are connected in the network!
 
 
 Adding PCs/Computers to Active Directory 
 --
-- Fisrt thing we need to do is add both machines to the domaian to our active directory  from the two Windows11 machines. Get the Windows11 Vm running by starting both Windows11 and 11-2.
+- Fisrt thing we need to do is add both machines to the domaian to our active directory  from the two Windows11 machines. Get the Windows Vm's running by starting both Windows11 and 11-2.
 
 - Lets start in Windows 11 and lets add this Windows to our domain. First right click on start icon and find system click on it and here  on the left handside find system again. now on that page scroll to the bottom of the page and find About click into it.
 
