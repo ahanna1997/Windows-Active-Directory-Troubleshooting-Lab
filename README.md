@@ -315,7 +315,11 @@ Now lets create Groups here are the Step to create groups:
 
 3.Click Employees folder and inside you should see the sales Department in the folder.
 
--Now lets create a couple more Groups by repeating steps 1-3 above for each Department.(IT Department, Operation Department , HR Department , and Administration Departments)
+
+<img width="556" height="290" alt="Image" src="https://github.com/user-attachments/assets/b68218fa-5c40-407e-9e36-410519e84f15" />
+
+
+-Now lets create a couple more Groups by repeating steps 1-3 above for each Department.(IT Department, Operation Department , HR Department ,and Administration Departments)
 
 -Now this is where you will add users in this groups 
 
