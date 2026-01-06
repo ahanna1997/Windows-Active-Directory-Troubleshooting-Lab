@@ -538,11 +538,14 @@ Adding PCs/Computers to Active Directory
 
 - Lets start in Windows 11 and lets add this Windows to our domain. First right click on start icon and find system click on it and here  on the left handside find system again. now on that page scroll to the bottom of the page and find About click into it.
 
-- In the About page find Advance system settings link and click on it.Once the system Properties page  click onthe Computer name tab  and click onto the change button.On the next page at the bottom lets change Member of section from Workgroup to Domain.(We want to change it to Domain because we want to add this Windows machine to the domain that we created in our windows Server which was mydomain.com or whatever you called it)
+- In the About page find Advance system settings link and click on it.Once the system Properties page  click on the Computer name tab  and click onto the change button.On the next page at the bottom lets change Member of section from Workgroup to Domain.(We want to change it to Domain because we want to add this Windows machine to the domain that we created in our windows Server which was mydomain.com or whatever you called it)
 
-- After Click ok and a Login popup should be there just login with your login details of your Server administrator.(If you remember our username should be Administrator and the Password should be Password1)
+- After Click ok  you will need to restrt your Windows .Afterclosing windows you will get a "restart computer to apply changes" popup should  appear.Restart your computer.
 
-- Thats it you will need to restart your computer do the same thing for Windows11-2.
+-After restart Log back in and check to see if the Windows was connected to your domain.
+
+
+- Do the same thing for Windows11-2.
 
 
 
